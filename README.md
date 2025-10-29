@@ -1,8 +1,6 @@
 # DP-TextUI - Sistema Avanzado de Interfaz de Texto 🚀
 Un sistema de TextUI moderno, optimizado y completamente personalizable para FiveM, compatible con qb-core, ESX y modo standalone.
 
-![Demo de DP-TextUI](https://imgur.com/a/Pbr8KyB)
-
 ---
 
 ## 🔧 Instalación
