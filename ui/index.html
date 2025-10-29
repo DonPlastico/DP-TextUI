@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>DP-TextUI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/610ae1a27e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <div id="settings-ui-container" style="display: none;">
+        <button id="close-button" class="close-button"><i class="fa-solid fa-xmark"></i></button>
+
+        <div class="settings-content">
+            <div class="compact-header">
+                <span class="compact-title">Panel de TextUI</span>
+            </div>
+
+            <div class="settings-grid">
+                <div class="setting-item">
+                    <label>Sonido</label>
+                    <div class="neo-toggle-container">
+                        <input class="neo-toggle-input" id="toggle-sound" type="checkbox" checked />
+                        <label class="neo-toggle" for="toggle-sound">
+                            <div class="neo-track">
+                                <div class="neo-background-layer"></div>
+                                <div class="neo-grid-layer"></div>
+                                <div class="neo-track-highlight"></div>
+                            </div>
+                            <div class="neo-thumb">
+                                <div class="neo-thumb-ring"></div>
+                                <div class="neo-thumb-core"></div>
+                                <div class="neo-thumb-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M9.5 17L19.5 7" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+                                <div class="neo-thumb-wave"></div>
+                                <div class="neo-thumb-pulse"></div>
+                            </div>
+                            <div class="neo-gesture-area"></div>
+                            <div class="neo-interaction-feedback">
+                                <div class="neo-ripple"></div>
+                                <div class="neo-progress-arc"></div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="setting-item full-width">
+                <label for="volume-slider">Volumen</label>
+                <div class="volume-container">
+                    <i class="fa-solid fa-volume-off"></i>
+                    <input type="range" id="volume-slider" min="0" max="100" value="50" class="volume-slider">
+                    <i class="fa-solid fa-volume-high"></i>
+                </div>
+            </div>
+
+            <div class="setting-item full-width">
+                <label for="position-select">Posición</label>
+                <select id="position-select" class="position-select">
+                    <option value="left" selected>Izquierda (Default)</option>
+
+                    <option value="top-center">Superior Centro</option>
+                    <option value="top-right">Superior Derecha</option>
+                    <option value="center-left">Centro Izquierda</option>
+                    <option value="center-right">Centro Derecha</option>
+                    <option value="bottom-left">Inferior Izquierda</option>
+                    <option value="bottom-center">Inferior Centro</option>
+                    <option value="bottom-right">Inferior Derecha</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button id="restore-settings">RESTAURAR</button>
+            <button id="save-settings">GUARDAR CAMBIOS</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
