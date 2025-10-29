@@ -1,20 +1,35 @@
 # DP-TextUI - Sistema Avanzado de Interfaz de Texto 🚀
+
 Un sistema de TextUI moderno, optimizado y completamente personalizable para FiveM, compatible con qb-core, ESX y modo standalone.
+
+<img width="960" height="auto" align="center" alt="DP-Animations Logo" src="/Miniaturas YT.png" />
+
+</p>
+
+<div align="center">
+
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![FiveM](https://img.shields.io/badge/FiveM-Script-important)](https://fivem.net/)
+
+</div>
 
 ---
 
 ## 🔧 Instalación
+
 1. Coloca la carpeta `DP-TextUI` en tu directorio `resources/`
 2. Añade `ensure DP-TextUI` en tu `server.cfg`
 3. Reinicia tu servidor
 
 **Requisitos**:
+
 - FiveM (Recomendado: versión más reciente)
 - qb-core **o** ESX (opcional para modo standalone)
 
 ---
 
 ## ✨ Novedades en la Versión 2.0
+
 ✅ **Sistema de posicionamiento mejorado**: Ahora los elementos se reorganizan automáticamente sin superposiciones  
 ✅ **Animaciones fluidas**: Transiciones suaves al mostrar/ocultar elementos  
 ✅ **Gestión de memoria optimizada**: Eliminación limpia de elementos sin artefactos visuales  
@@ -24,6 +39,7 @@ Un sistema de TextUI moderno, optimizado y completamente personalizable para Fiv
 ---
 
 ## 💡 Características Clave
+
 ✔️ Sistema de IDs único para múltiples TextUI  
 ✔️ Soporte para acciones mantenidas con barra de progreso animada  
 ✔️ Posicionamiento automático y dinámico de múltiples elementos  
@@ -34,7 +50,9 @@ Un sistema de TextUI moderno, optimizado y completamente personalizable para Fiv
 ---
 
 ### 🛠 Soporte Técnico
+
 # Si encuentras problemas:
+
 1. Verifica que el recurso esté iniciado y se llama 'DP-TextUI' (Si cambias el nombre puede dejar de funcionar).
 2. Revisa la consola F8 para errores.
 3. Asegúrate de usar IDs únicos.
@@ -42,6 +60,7 @@ Un sistema de TextUI moderno, optimizado y completamente personalizable para Fiv
    ¡Listo para implementar! 🎉
 
 # Mejoras principales incluidas:
+
 1. Sección de Novedades: Destaca las mejoras que hemos implementado
 2. Ejemplos más completos: Incluyendo el manejo de múltiples TextUI.
 3. Código listo para usar: Ejemplos copiables directamente.
@@ -52,6 +71,7 @@ Un sistema de TextUI moderno, optimizado y completamente personalizable para Fiv
 ---
 
 ### 📚 Mostrar un TextUI
+
 ```lua
 -- Mostrar texto simple
 exports['DP-TextUI']:MostrarUI('menu_principal', 'Para abrir el menú', 'E', false)
@@ -75,13 +95,14 @@ end)
 ```
 
 ## 📍 Ejemplo Avanzado con Zonas
+
 ```lua
 local inZone = false
 local activeTexts = {}
 
 CreateThread(function()
     local coords = vector3(120.0, -200.0, 30.0)
-    
+
     while true do
         local playerCoords = GetEntityCoords(PlayerPedId())
         local distance = #(playerCoords - coords)
@@ -110,9 +131,10 @@ CreateThread(function()
 end)
 ```
 
-
 ## 🔄 Migración desde qb-core
+
 # Antes:
+
 ```lua
 -- Mostrar
 exports['qb-core']:DrawText('Presiona [E] para abrir', 'left')
@@ -126,6 +148,7 @@ TriggerEvent('qb-core:client:HideText')
 ```
 
 # Después (DP-TextUI):
+
 ```lua
 -- Mostrar (equivalente básico)
 exports['DP-TextUI']:MostrarUI('ejemplo_id', 'Texto de ejemplo', 'E', false)
@@ -138,6 +161,7 @@ exports['DP-TextUI']:MostrarUI('menu_avanzado', 'Menú avanzado', 'F', true, 200
 ```
 
 # Adaptador completo para qb-core:
+
 ```lua
 -- Reemplazar DrawText/HideText globalmente
 RegisterNetEvent('qb-core:client:DrawText')
